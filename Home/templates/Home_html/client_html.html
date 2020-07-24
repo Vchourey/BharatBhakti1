@@ -1,0 +1,33 @@
+{% load static %}
+<section class="contact py-5 " id="contact">
+<div  class="bg-light">
+	<div class="row">
+        <div class="col-md-12">
+		        <div class="container card card-body">
+                    <h5 style="color:orange">Being with us for future update's</h5>
+		             <form enctype="multipart/form-data" method="post">
+                         {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <input id="id_company_enquire_name" name="company_enquire_name" placeholder="Enter Name/ Company" class="form-control" type="text" required="">
+                            </div>
+                             <div class="form-group col-md-4">
+                                <input id="id_phone" name="phone" placeholder="Mobile No." class="form-control" required="required" type="number">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <input type="email" name="email" class="form-control" id="id_email" placeholder="Email address" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <input class="btn btn-secondary" type="submit" name="" value="Submit">
+                        </div>
+                    </form>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+</section>
+
+</br>

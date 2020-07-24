@@ -1,0 +1,259 @@
+{% extends 'Home_html/base.html' %}
+{% load static %}
+
+
+{% block title %} | Welcome {% endblock %}
+
+{% block content %}
+<!-- Showcase -->
+
+
+
+<section>
+
+  <br>
+      <div class="container text-center">
+        <h2>INDUSTRIAL INSTRUMENTATION, CONTROLS AND AUTOMATION</h2>
+      </div>
+    <br>
+    <div class="how-section1">
+        <div class="container row">
+            <div class="col-md-6 how-img">
+                <div class="sad">
+                    <img  src="{% static 'img/homes/instru2.jpg' %}" class="rounded-square img-fluid" alt=""/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>Instrumentation Service</h4>
+                    <h4 class="subheading">Our Instrumentation services helps to run and grow your business.</h4>
+                    <p class="text-muted">
+                        We, Caliber Instrumentation service, are working in industry of instrument to provide wide range of instrumentation service for industrialies
+                         to ensure one stop solution at one place, We are supporting different verity of instruments fields like Biomedical instrument,
+                         electronic instruments , electrical instruments and mechanical instrument along with calibration.
+                    </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+		<h2>Our Work: </h2>
+		<div class="row mb-5">
+			<div class="col-md-4">
+				<div class="card">
+					<a href="#">
+                        <img src="{% static 'img/homes/instru2.jpg' %}" class="card-img-top" alt="...">
+                    </a>
+					<div class="card-body">
+						<h5 class="card-title">PROJECT'S  परियोजना</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-sm btn-primary">Visit / विस्तृत</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+                    <a href="#">
+                        <img src="https://source.unsplash.com/random/1920x1080" class="card-img-top" alt="...">
+                    </a>
+					<div class="card-body">
+						<h5 class="card-title">EXHIBITION  प्रदर्शनी</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-sm btn-primary">Visit / विस्तृत</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+                    <a href="#">
+                        <img src="{% static 'img/homes/pneumatic1.jpg' %}" class="card-img-top" alt="...">
+                    </a>
+                        <div class="card-body">
+						<h5 class="card-title">PROGRAMM'S  कार्यक्रम</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-sm btn-primary">Visit / विस्तृत</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+        <!-- row -->
+		<div class="row">
+			<div class="bg-dark col-md-6">
+				<div class="card bg-dark mb-3">
+					<div class="row no-gutters align-items-center">
+						<h5 class="card-title" style="color: Orange"> Upcoming Event's</h5>
+                        <div class="alert alert-primary" role="alert">
+                          This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                          This is a secondary alert with <a href="#" class="alert-link">an example link</a>.  jnvkljdnhlfbvndnvvnGive it a click if you like.
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                          This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                          This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="mb-3">
+					<div class="row no-gutters align-items-center">
+						<div class="col-md-6">
+						</div>
+						<div class=" card col-md-6">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!--
+<section id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-5">
+        <div class="overlay p-5">
+          <h1 class="display-4 mb-4">
+            Property Searching Just Got So Easy
+            Our Other Activities :- Technical Services / Instrumentation Systems / Automation / Consultancy.
+
+          </h1>
+          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
+            voluptatum tempore! Consectetur, id commodi!</p>
+          <div class="search">
+            <form action="% url 'index' %">
+              <!-- Form Row 1
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Keywords</label>
+                  <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">City</label>
+                  <input type="text" name="city" class="form-control" placeholder="City">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">State</label>
+                  <select name="state" class="form-control">
+                    <option selected="true" disabled="disabled">State (All)</option>
+                    {% for key,value in state_choices.items %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <!-- Form Row 2
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label class="sr-only">Bedrooms</label>
+                  <select name="bedrooms" class="form-control">
+                    <option selected="true" disabled="disabled">Bedrooms (All)</option>
+                    {% for key,value in bedroom_choices.items %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <select name="price" class="form-control" id="type">
+                    <option selected="true" disabled="disabled">Max Price (Any)</option>
+                    {% for key,value in price_choices.items %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+<!--
+<br>
+  <!-- Alerts --
+  % include 'Homeyard_html/_alerts.html' %
+
+  <!-- Listings --
+  <section id="listings" class="py-5">
+    <div class="container">
+      <h3 class="text-center mb-3">Latest Listings</h3>
+      <div class="row">
+        {% if listings %}
+          {% for listing in listings %}
+            <!-- Listing 1 --
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card listing-preview">
+                <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
+                <div class="card-img-overlay">
+                  <h2>
+                    <span class="badge badge-secondary text-white">${{ listing.price  }}</span>
+                  </h2>
+                </div>
+                <div class="card-body">
+                  <div class="listing-heading text-center">
+                    <h4 class="text-primary">{{ listing.title }}</h4>
+                    <p>
+                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}</p>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
+                    <div class="col-6">
+                      <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
+                  </div>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
+                    <div class="col-6">
+                      <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-user"></i> {{ listing.realtor }}</div>
+                  </div>
+                  <div class="row text-secondary pb-2">
+                    <div class="col-6">
+                      <i class="fas fa-clock"></i> {{ listing.list_date | timesince }}</div>
+                  </div>
+                  <hr>
+                  <a href="% url 'index' listing.id %" class="btn btn-primary btn-block">More Info</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="col-md-12">
+            <p>No Listings Available</p>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </section>
+
+-->
+
+  <!-- Client image bar-->
+  {% include 'Home_html/client_html.html'%}
+
+{% endblock %}
