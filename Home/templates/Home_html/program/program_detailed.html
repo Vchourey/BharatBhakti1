@@ -1,10 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'Home_html/base.html' %}
+{% load static %}
 
-</body>
-</html>
+
+{% block title %} | Program Gallery{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="carousel-example-generic">
+    <div class="carousel-inner" id="headpic">
+        <img src="{% static 'img/slider/programs.jpg'%}">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="showcase-inner" class="text-white">
+    <div class="">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h2>Program Gallery </h2>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="clearfix">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3 class="section-title"></h3>
+        </header>
+        <br>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          {% for img in function_details %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="{{ img.images.url }}" class="img-fluid" alt="" style="border-style: solid; border-color: black; border-radius:4px; border-width: 1px;  max-height:400px;">
+                <div class="portfolio-info">
+                  <h4>{{ img.image_title}}</h4>
+                  <div>
+                    <a href="{{ img.images.url }}" data-gall="portfolioGallery" title="App 1" class="venobox link-preview"><i class="ion ion-eye"></i></a>
+                    <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+{% endblock %}

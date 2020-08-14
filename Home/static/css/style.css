@@ -5,7 +5,7 @@ img {
   width: 100%; }
 
 .logo {
-  max-height: 50px;
+  max-height: 45px;
   max-width: 60px }
 
 .navbar {
@@ -50,9 +50,10 @@ img {
     background: #44444a; }
 
 #showcase-inner {
+  padding: 5px 0 0 0;
   position: relative;
   overflow: hidden;
-  min-height: 100px; }
+  min-height: 50px; }
   #showcase-inner::before {
     content: '';
     position: absolute;
@@ -86,7 +87,7 @@ img {
     #showcase p {
       display: none; }
   #top-bar {
-    text-align: center; }
+    text-align: center }
     #top-bar .social {
       text-align: center !important; } }
 
@@ -179,8 +180,9 @@ img {
 /* index page CSS */
 
 .how-section1{
-    margin-top:-15%;
-    padding: 10%;
+    margin-top: -12%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 .how-section1 h4{
     color: #ffa500;
@@ -197,16 +199,16 @@ img {
 }
 .how-img
 {
-    box-shadow: 0 0 8px 8px white inset;
+    box-shadow: 0 0 0px 0px  inset;
     text-align: center;
 }
-.how-img img{
-    box-shadow: 0 0 8px 8px white inset;
-    width: 100%;
+.how-img .img{
+    box-shadow: 0 0 0px 0px  inset;
+    min-width: 240px;
+    min-height: 230px;
 }
 
 
-sad
 {
     display:block;
     position:relative;
@@ -266,19 +268,18 @@ i {
 
 }
 #navbarSupportedContent ul li a{
-	color: #0b0a2b ;
     text-decoration: none;
     font-size: 15px;
     display: block;
-    padding: 20px 20px;
+    padding: 12px 15px;
     transition-duration:0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
 }
 #navbarSupportedContent>ul>li.active>a{
-	color: #5161ce;
+
 	background-color: transparent;
-	transition: all 0.7s;
+	transition: all 0.5s;
 }
 #navbarSupportedContent a:not(:only-child):after {
 	content: "\f105";
@@ -346,7 +347,7 @@ i {
 
 @media (max-width: 991px){
 	#navbarSupportedContent ul li a{
-		padding: 12px 30px;
+		padding: 12px 60px;
 	}
 	.hori-selector{
 		margin-top: 0px;
@@ -400,5 +401,25 @@ i {
   object-fit: cover;
 }
 
-/* Bharat bhakti Program List CSS*/
+/* Bharat bhakti Head Picture/list CSS*/
+#headpic{
+        border-style: solid;
+        border-color: black;
+        border-radius:4px;
+        border-width: 1px;
+        max-height:350px;
+        max-width:auto; !important;
+    }
 
+
+/* Bharat bhakti gallary CSS*/
+
+#imggallary {
+        border-style: solid;
+        border-color: black;
+        border-radius:4px;
+        border-width: 1px;
+        max-height:400px;
+        }
+
+}

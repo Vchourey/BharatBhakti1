@@ -19,4 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Home.url')),
+    path('enquiry', include('Enquiry.url')),
+    path(r'^i18n/', include('django.conf.urls.i18n'))
+
 ]

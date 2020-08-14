@@ -18,6 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR = [os.path.join(BASE_DIR, 'templates')]
 STATIC_DIR = (os.path.join(BASE_DIR, 'static'))
 MEDIA_DIR = (os.path.join(BASE_DIR, 'media'))
+MEDIA_ROOT = (os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ))
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,7 +36,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Home.apps.HomeConfig',
+    'Enquiry',
+    'Home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,9 +51,15 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+MIDDLEWARE_CLASSES = [
+
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'BharatBhakti1.urls'
@@ -126,7 +134,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+LOCAL_PATHS = [os.path.join(BASE_DIR, 'locale')]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 

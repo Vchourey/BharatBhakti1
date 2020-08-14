@@ -1,41 +1,82 @@
 {% extends 'Home_html/base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% block title %} | Welcome {% endblock %}
 
 {% block content %}
 <!-- Showcase -->
 
+<!-- Image Slider / Carousel -->
+  {% include 'Home_html/_slider.html'%}
 
+<section id="showcase-inner" class="text-white">
+    <div class="">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h2 >सब धर्मो से बढ़कर होता राष्ट्र धर्म</h2>
 
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- You tube video section -->
 <section>
-
   <br>
       <div class="container text-center">
-        <h2>INDUSTRIAL INSTRUMENTATION, CONTROLS AND AUTOMATION</h2>
+        <h2>भारत भक्ति संस्थान</h2>
       </div>
     <br>
-    <div class="how-section1">
-        <div class="container row">
+    <div class="container how-section1">
+        <div class="row">
             <div class="col-md-6 how-img">
-                <div class="sad">
-                    <img  src="{% static 'img/homes/instru2.jpg' %}" class="rounded-square img-fluid" alt=""/>
+
+                <div class="img embed-responsive embed-responsive-16by9" style="border-radius:4px;">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VhzRdu3iN88" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>></iframe>
                 </div>
             </div>
             <div class="col-md-6">
-                <h4>Instrumentation Service</h4>
-                    <h4 class="subheading">Our Instrumentation services helps to run and grow your business.</h4>
-                    <p class="text-muted">
-                        We, Caliber Instrumentation service, are working in industry of instrument to provide wide range of instrumentation service for industrialies
-                         to ensure one stop solution at one place, We are supporting different verity of instruments fields like Biomedical instrument,
-                         electronic instruments , electrical instruments and mechanical instrument along with calibration.
+                <h4>BharatBhakti Sansthaan</h4>
+                    <h4 class="subheading">{% trans "Various Consciousness Journey" %}</h4>
+                    <p class="text-muted" style="text-align:justify;" >
+                        We are BharatBhakti Sansthan, was established to raise national pride, to explore the scientific and social sides of the Bhartiya culture, and to spread them all over the world. For this, the stage programmes of Baba Ji, exhibitions, books, and other mediums are also used. Consciousness journeys are the most prominent of them. Bharat Bhakti institution, with the help of other organizations has organized many types of foot and vehicular journeys to create awareness about various subjects
                     </p>
             </div>
         </div>
     </div>
 </section>
 
+
+<!-- Babaji personal profile  section -->
+<section id="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row about-extra">
+          <div class="col-lg-4 order-1 order-lg-2" data-aos="fade-left" >
+              <br>
+            <img src="{% static 'img/Babaji/Baba.jpg' %}" class="img-fluid" style="border-radius:5px;">
+          </div>
+
+          <div class="col-lg-7 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+            <h3 class="card-body" style="color:orange; font-weight: bold">Babaji Satya Narayan Mourya</h3>
+
+                    <p class="text-muted" style="text-align:justify;" >
+                       What is Shri Mourya, (Baba) as an artist? His personality may be better highlighted if we ask the question, what he is not….and, to call Baba an artist grossly falls short of the sum total of his personality as it fails to capture the subtle nuances of his reflective, creative and expressive personality.
+                    </p>
+                    <p class="text-muted" style="text-align:justify;" >
+                        To my mind, to sum it up in one sentence, instead of being a disciple of one art, for the sake of being an artist, he is an artist of pure expression. He uses not just one, but any art that is the right medium to express his particular inner reflection as creativity.
+                    </p>
+              <a href="/aboutbabaji" class="btn btn-sm btn-primary">Know More/ विस्तृत</a>
+          </div>
+
+        </div>
+        <hr>
+      </div>
+</section>
+<br>
+
+
+<!-- Our Work section -->
 <section>
     <div class="container">
 		<h2>Our Work: </h2>
@@ -43,11 +84,12 @@
 			<div class="col-md-4">
 				<div class="card">
 					<a href="/projectlist">
-                        <img src="{% static 'img/homes/instru2.jpg' %}" class="card-img-top" alt="...">
+                        <img src="{% static 'img/home/Project.jpg' %}" class="card-img-top" alt="...">
                     </a>
 					<div class="card-body">
 						<h5 class="card-title">PROJECT'S  परियोजना</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<p class="card-text">Our Sansthan have completed many projects like Gau Mata,plantations,Rastriya Chetna yatra and various locations.
+                        </p>
 						<a href="/projectlist" class="btn btn-sm btn-primary">Visit / विस्तृत</a>
 					</div>
 				</div>
@@ -55,11 +97,11 @@
 			<div class="col-md-4">
 				<div class="card">
                     <a href="/exhibitionlist">
-                        <img src="https://source.unsplash.com/random/1920x1080" class="card-img-top" alt="...">
+                        <img src="{% static 'img/home/Exhibitions.jpg' %}" class="card-img-top" alt="...">
                     </a>
 					<div class="card-body">
 						<h5 class="card-title">EXHIBITION  प्रदर्शनी</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<p class="card-text">Our Sansthan have completed many exhibitions Hindu Granth, Vedas and Dharm Evm Panths at various locations..</p>
 						<a href="/exhibitionlist" class="btn btn-sm btn-primary">Visit / विस्तृत</a>
 					</div>
 				</div>
@@ -67,11 +109,11 @@
 			<div class="col-md-4">
 				<div class="card">
                     <a href="/programlist">
-                        <img src="{% static 'img/homes/pneumatic1.jpg' %}" class="card-img-top" alt="...">
+                        <img src="{% static 'img/home/Prograam.jpg' %}" class="card-img-top" alt="...">
                     </a>
                         <div class="card-body">
 						<h5  class="card-title">PROGRAMM'S  कार्यक्रम</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<p class="card-text">Our Sansthan have organised many programs like RAM Katha, Shiv Katha, Ganaga Avtaran at various locations.</p>
 						<a href="/programlist" class="btn btn-sm btn-primary">Visit / विस्तृत</a>
 					</div>
 				</div>
@@ -81,22 +123,16 @@
 
         <!-- row -->
 		<div class="row">
-			<div class="bg-dark col-md-6">
+			<div class="bg-dark col-md-6" style="border-radius:6px;">
 				<div class="card bg-dark mb-3">
 					<div class="row no-gutters align-items-center">
 						<h5 class="card-title" style="color: Orange"> Upcoming Event's</h5>
-                        <div class="alert alert-primary" role="alert">
-                          This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-                        </div>
-                        <div class="alert alert-secondary" role="alert">
-                          This is a secondary alert with <a href="#" class="alert-link">an example link</a>.  jnvkljdnhlfbvndnvvnGive it a click if you like.
-                        </div>
-                        <div class="alert alert-success" role="alert">
-                          This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-                        </div>
-                        <div class="alert alert-danger" role="alert">
-                          This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-                        </div>
+                        {% for eve in events %}
+
+                            <div class="alert alert-success" role="alert">{{ eve.title}},{{ eve.location}}, {{eve.event_date}}
+
+                            </div>
+                        {% endfor %}
 
 					</div>
 				</div>
@@ -107,11 +143,12 @@
 						<div class="col-md-6">
 						</div>
 						<div class=" card col-md-6">
-							<div class="card-body">
+                           <!-- <div class="card-body">
 								<h5 class="card-title">Card title</h5>
 								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 								<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 							</div>
+                           -->
 						</div>
 					</div>
 				</div>
@@ -121,139 +158,7 @@
 	</div>
 </section>
 
+<br><br>
 
-<!--
-<section id="showcase">
-    <div class="container text-center">
-      <div class="home-search p-5">
-        <div class="overlay p-5">
-          <h1 class="display-4 mb-4">
-            Property Searching Just Got So Easy
-            Our Other Activities :- Technical Services / Instrumentation Systems / Automation / Consultancy.
-
-          </h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
-            voluptatum tempore! Consectetur, id commodi!</p>
-          <div class="search">
-            <form action="% url 'index' %">
-              <!-- Form Row 1
-              <div class="form-row">
-                <div class="col-md-4 mb-3">
-                  <label class="sr-only">Keywords</label>
-                  <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)">
-                </div>
-
-                <div class="col-md-4 mb-3">
-                  <label class="sr-only">City</label>
-                  <input type="text" name="city" class="form-control" placeholder="City">
-                </div>
-
-                <div class="col-md-4 mb-3">
-                  <label class="sr-only">State</label>
-                  <select name="state" class="form-control">
-                    <option selected="true" disabled="disabled">State (All)</option>
-                    {% for key,value in state_choices.items %}
-                      <option value="{{ key }}">{{ value }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-              </div>
-              <!-- Form Row 2
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label class="sr-only">Bedrooms</label>
-                  <select name="bedrooms" class="form-control">
-                    <option selected="true" disabled="disabled">Bedrooms (All)</option>
-                    {% for key,value in bedroom_choices.items %}
-                      <option value="{{ key }}">{{ value }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <select name="price" class="form-control" id="type">
-                    <option selected="true" disabled="disabled">Max Price (Any)</option>
-                    {% for key,value in price_choices.items %}
-                      <option value="{{ key }}">{{ value }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-              </div>
-              <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
--->
-<!--
-<br>
-  <!-- Alerts --
-  % include 'Homeyard_html/_alerts.html' %
-
-  <!-- Listings --
-  <section id="listings" class="py-5">
-    <div class="container">
-      <h3 class="text-center mb-3">Latest Listings</h3>
-      <div class="row">
-        {% if listings %}
-          {% for listing in listings %}
-            <!-- Listing 1 --
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card listing-preview">
-                <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
-                <div class="card-img-overlay">
-                  <h2>
-                    <span class="badge badge-secondary text-white">${{ listing.price  }}</span>
-                  </h2>
-                </div>
-                <div class="card-body">
-                  <div class="listing-heading text-center">
-                    <h4 class="text-primary">{{ listing.title }}</h4>
-                    <p>
-                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}</p>
-                  </div>
-                  <hr>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
-                    <div class="col-6">
-                      <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
-                  </div>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
-                    <div class="col-6">
-                      <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
-                  </div>
-                  <hr>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      <i class="fas fa-user"></i> {{ listing.realtor }}</div>
-                  </div>
-                  <div class="row text-secondary pb-2">
-                    <div class="col-6">
-                      <i class="fas fa-clock"></i> {{ listing.list_date | timesince }}</div>
-                  </div>
-                  <hr>
-                  <a href="% url 'index' listing.id %" class="btn btn-primary btn-block">More Info</a>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        {% else %}
-          <div class="col-md-12">
-            <p>No Listings Available</p>
-          </div>
-        {% endif %}
-
-      </div>
-    </div>
-  </section>
-
--->
-
-  <!-- Client image bar-->
-  {% include 'Home_html/client_html.html'%}
 
 {% endblock %}

@@ -10,137 +10,44 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}">
 </head>
 
+
+<section>
+  <div class="carousel-example-generic">
+    <div class="carousel-inner" id="headpic">
+        <img src="{% static 'img/slider/projects.jpg'%}">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <div class='contain'>
   <div class='blog-posts'>
-    <div class='post featured'>
-      <a href='#'>
-        <div class='image' style='background-image: url(https://unsplash.it/600/400/?random)'>
-          <div class='time'>
-            <div class='date'>04</div>
-            <div class='month'>APR</div>
-          </div>
-        </div>
-        <div class='content'>
-          <h5 class="siz" style="color:orange;">Multiply created make behold fourth yielding living male very god.</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo tempore at eveniet adipisci harum error deserunt in sint aspernatur magni asperiores explicabo corporis ratione praesentium illum magnam esse ipsa dignissimos quaerat perferendis dolor vero? Maiores hic modi optio eaque...</p>
-        </div>
-      </a>
-    </div>
-      <div class='post featured'>
-      <a href='#'>
-        <div class='image' style='background-image: url(https://unsplash.it/600/400/?random)'>
-          <div class='time'>
-            <div class='date'>04</div>
-            <div class='month'>APR</div>
-          </div>
-        </div>
-        <div class='content'>
-          <h5 class="siz" style="color:orange;">Multiply created make behold fourth yielding living male very god.</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo tempore at eveniet adipisci harum error deserunt in sint aspernatur magni asperiores explicabo corporis ratione praesentium illum magnam esse ipsa dignissimos quaerat perferendis dolor vero? Maiores hic modi optio eaque...</p>
-        </div>
-      </a>
-    </div>
-      <div class='post featured'>
-      <a href='#'>
-        <div class='image' style='background-image: url(https://unsplash.it/600/400/?random)'>
-          <div class='time'>
-            <div class='date'>04</div>
-            <div class='month'>APR</div>
-          </div>
-        </div>
-        <div class='content'>
-          <h5 class="siz" style="color:orange;">Multiply created make behold fourth yielding living male very god.</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo tempore at eveniet adipisci harum error deserunt in sint aspernatur magni asperiores explicabo corporis ratione praesentium illum magnam esse ipsa dignissimos quaerat perferendis dolor vero? Maiores hic modi optio eaque...</p>
-        </div>
-      </a>
-    </div>
-      <div class='post featured'>
-      <a href='#'>
-        <div class='image' style='background-image: url(https://unsplash.it/600/400/?random)'>
-          <div class='time'>
-            <div class='date'>04</div>
-            <div class='month'>APR</div>
-          </div>
-        </div>
-        <div class='content'>
-          <h5 class="siz" style="color:orange;">Multiply created make behold fourth yielding living male very god.</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo tempore at eveniet adipisci harum error deserunt in sint aspernatur magni asperiores explicabo corporis ratione praesentium illum magnam esse ipsa dignissimos quaerat perferendis dolor vero? Maiores hic modi optio eaque...</p>
-        </div>
-      </a>
-    </div>
-
-    <!--
-    ref- https://bootsnipp.com/snippets/4MKQK
-    <div class='row cf'>
-      <div class='post'>
-        <a href='#'>
-          <div class='image'>
-            <div class='time'>
-              <div class='date'>
-                16
+    {% for project in projects %}
+          <div class='post featured'>
+            <a href='/projectdetail/{{project.project_title}}/'>
+              <div class='image'>
+                  {% for img in images %}
+                    {% ifequal img.project_name.project_title project.project_title %}
+                      <img src="{{ img.images.url }}">
+                    {% endifequal %}
+                  {% endfor %}
+                <div class='time'>
+                  <div class='date'></div>
+                  <div class='month'></div>
+                </div>
               </div>
-              <div class='month'>MAR</div>
-            </div>
-          </div>
-          <div class='content'>
-            <h1 style="color:orange;">Man called gathering us great subdue unto herb sixth forth.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>
-          </div>
-        </a>
-      </div>
-      <div class='post'>
-        <a href='#'>
-          <div class='image'>
-            <div class='time'>
-              <div class='date'>
-                28
+              <div class='content'>
+                <h5 class="siz" style="color:orange;">{{project.project_title}},  {{project.location}}</h5>
+                <p>{{project.description}}</p>
               </div>
-              <div class='month'>MAR</div>
-            </div>
+            </a>
           </div>
-          <div class='content'>
-            <h1>Man called gathering us great subdue unto herb sixth forth.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class='row cf'>
-      <div class='post'>
-        <a href='#'>
-          <div class='image'>
-            <div class='time'>
-              <div class='date'>
-                10
-              </div>
-              <div class='month'>MAR</div>
-            </div>
-          </div>
-          <div class='content'>
-            <h1>Man called gathering us great subdue unto herb sixth forth.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>
-          </div>
-        </a>
-      </div>
-      <div class='post'>
-        <a href='#'>
-          <div class='image'>
-            <div class='time'>
-              <div class='date'>
-                27
-              </div>
-              <div class='month'>MAR</div>
-            </div>
-          </div>
-          <div class='content'>
-            <h1>Man called gathering us great subdue unto herb sixth forth.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    -->
+    {% endfor %}
+      </a>
   </div>
 </div>
+
 
 {% endblock %}

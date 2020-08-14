@@ -52,6 +52,4 @@ $(".navbar-toggler").click(function(){
   setTimeout(function(){ test(); });
 });
 
-/* Bharat bhakti NavBar JavaScript */
-
 
